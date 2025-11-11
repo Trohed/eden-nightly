@@ -242,14 +242,14 @@ jobs:
              optimize: PGO
              arch: x86_64
              runs-on: windows-2022
-           - toolchain: msys2
-             optimize: PGO
-             arch: x86_64
-             runs-on: windows-2022
-           - toolchain: msys2
-             optimize: normal
-             arch: x86_64
-             runs-on: windows-2022
+           #- toolchain: msys2
+           #  optimize: PGO
+           #  arch: x86_64
+           #  runs-on: windows-2022
+           #- toolchain: msys2
+           #  optimize: normal
+           #  arch: x86_64
+           #  runs-on: windows-2022
     defaults:
       run:
         shell: ${{ matrix.toolchain == 'msys2' && 'msys2 {0}' || 'bash {0}' }}
